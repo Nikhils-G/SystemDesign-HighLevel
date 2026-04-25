@@ -1,6 +1,6 @@
 # System Design Experiments
 
-Small, focused experiments. Each folder answers one real question I had while shipping things. `NN-name/` per topic — open the folder's README for the full story.
+Focused experiments; Each folder answers one real question I had while shipping things. `NN-name/` per topic — open the folder's README for the full story.
 
 ## Done
 

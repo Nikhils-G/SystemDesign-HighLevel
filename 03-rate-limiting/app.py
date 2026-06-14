@@ -1,5 +1,3 @@
-import asyncio
-
 from fastapi import Depends, FastAPI, HTTPException, Request, Response
 
 from limiter import Limiter, SlidingWindow, TokenBucket
@@ -38,8 +36,7 @@ def rate_limit(limiter: Limiter):
 
 
 @app.post("/chat")
-async def chat(_: object = Depends(rate_limit(chat_limiter))):
-    await asyncio.sleep(0.2)
+def chat(_: object = Depends(rate_limit(chat_limiter))):
     return {"answer": "a thoughtful, expensive answer"}
 
 
